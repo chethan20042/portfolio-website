@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chethan Shetty | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+ 
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+ 
+  <!-- Background Blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+ 
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-name">CS</div>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Navbar -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">Chethan</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+ 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for opportunities
+      </div>
+      <h1>
+        Hi, I'm
+        <span class="name">Chethan Shetty</span>
+      </h1>
+      <div class="typing-wrapper">
+        <span id="typing"></span><span class="cursor-blink"></span>
+      </div>
+      <p>
+        A dedicated Computer Applications student with a strong foundation in Python,
+        database management, and web development — with genuine enthusiasm for continuous
+        learning and growth.
+      </p>
+      <div class="buttons">
+        <a href="assets/chethan Resume.pdf" class="btn primary" download>
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+        <a href="projects.html" class="btn secondary">
+          View Projects <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+ 
+    <div class="hero-image">
+      <div class="hero-ring hero-ring-1"></div>
+      <div class="hero-ring hero-ring-2"></div>
+      <div class="hero-image-wrap">
+        <img src="assets/csimage.jpg" alt="Chethan"> 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat-card" data-delay="0">
+      <h2 class="counter" data-target="10">0</h2>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat-card" data-delay="150">
+      <h2 class="counter" data-target="8">0</h2>
+      <p>Certifications Earned</p>
+    </div>
+    <div class="stat-card" data-delay="300">
+      <h2 class="counter" data-target="15">0</h2>
+      <p>Skills Mastered</p>
+    </div>
+  </section>
+ 
+  <!-- Floating Social Icons -->
+  <div class="floating-social">
+    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+ 
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Chethan Shetty — Built with passion</p>
+  </footer>
+ 
+  <script src="js/script.js"></script>
+</body>
+</html>
