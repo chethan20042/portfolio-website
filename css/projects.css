@@ -1,0 +1,321 @@
+/* =============================================
+   projects.css — matches style.css dark theme
+   ============================================= */
+
+/* ---- Hero ---- */
+.projects-hero {
+  min-height: 38vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-heading {
+  max-width: 680px;
+}
+
+.projects-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 229, 255, 0.06);
+  color: var(--accent);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.projects-heading h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.projects-heading h1 span {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projects-heading p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---- Filter Tabs ---- */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.3rem;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--muted);
+  cursor: none;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  border-color: rgba(0, 229, 255, 0.3);
+  color: var(--accent);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-color: transparent;
+  color: #080b10;
+  font-weight: 600;
+}
+
+/* ---- Projects Grid ---- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4rem) 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Project Card ---- */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  z-index: 1;
+}
+
+.project-card:hover {
+  border-color: rgba(0, 229, 255, 0.2);
+  background: var(--surface2);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 229, 255, 0.07);
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card.hidden {
+  display: none;
+}
+
+/* Image / Placeholder */
+.project-image {
+  position: relative;
+  height: 175px;
+  overflow: hidden;
+  background: var(--surface2);
+}
+
+.project-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: var(--accent);
+  opacity: 0.18;
+  transition: opacity 0.3s ease;
+}
+
+/* Overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 11, 16, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-card:hover .project-placeholder {
+  opacity: 0.08;
+}
+
+.overlay-btn {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1.1rem;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: none;
+}
+
+.overlay-btn:hover {
+  background: rgba(0, 229, 255, 0.1);
+  border-color: rgba(0, 229, 255, 0.4);
+  color: var(--accent);
+}
+
+.overlay-btn.live {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-color: transparent;
+  color: #080b10;
+  font-weight: 600;
+}
+
+.overlay-btn.live:hover {
+  opacity: 0.85;
+}
+
+/* Card Body */
+.project-body {
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+}
+
+.project-tags span {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  background: rgba(0, 229, 255, 0.06);
+  color: var(--accent);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+.project-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 0.55rem;
+}
+
+.project-body p {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+
+/* Card Footer Links */
+.project-links {
+  display: flex;
+  gap: 1.2rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.project-links a {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+  cursor: none;
+}
+
+.project-links a:hover {
+  color: var(--accent);
+}
+
+/* Disabled link (workshop — no GitHub) */
+.project-links a.disabled-link {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem 4rem;
+  }
+
+  .projects-hero {
+    padding: 8rem 1.5rem 2rem;
+  }
+}

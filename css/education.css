@@ -1,0 +1,410 @@
+/* =============================================
+   CHETHAN SHETTY | EDUCATION — education.css
+   (Depends on style.css for reset, vars, navbar,
+    cursor, blobs, loader, footer, social)
+   ============================================= */
+
+/* ---- Active nav link ---- */
+.nav-links a.active {
+  color: var(--accent);
+}
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+/* ---- Page Hero ---- */
+.edu-hero {
+  min-height: 44vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px clamp(1.5rem, 5vw, 4rem) 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.edu-hero-inner {
+  max-width: 680px;
+  opacity: 0;
+  animation: slideUp 0.9s ease 0.1s forwards;
+}
+
+.edu-hero-inner .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 229, 255, 0.06);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.edu-hero-inner h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 60%, #ff6ab0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.edu-hero-inner p {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ---- Timeline Section ---- */
+.timeline-section {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem clamp(1.5rem, 5vw, 4rem) 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ---- Timeline Item ---- */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0 1.75rem;
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Icon column */
+.timeline-icon-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--surface2);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.timeline-item:hover .timeline-icon {
+  background: rgba(0, 229, 255, 0.08);
+  border-color: var(--accent);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.18);
+}
+
+.timeline-line {
+  flex: 1;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(0, 229, 255, 0.25), rgba(124, 106, 245, 0.15));
+  margin: 4px 0;
+  min-height: 36px;
+}
+
+/* Card */
+.timeline-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s;
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.timeline-item:hover .timeline-card {
+  border-color: rgba(0, 229, 255, 0.2);
+  background: var(--surface2);
+  transform: translateX(4px);
+}
+
+.timeline-item:hover .timeline-card::before {
+  transform: scaleX(1);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(0, 229, 255, 0.06);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 100px;
+  padding: 3px 12px;
+  margin-bottom: 0.9rem;
+}
+
+.timeline-card h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.degree-tag {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #080b10;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.timeline-card h3 {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.timeline-card h3 i {
+  font-size: 0.75rem;
+  color: var(--accent2);
+}
+
+.timeline-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 1.1rem;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.timeline-tags span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 10px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.timeline-item:hover .timeline-tags span {
+  color: var(--accent);
+  border-color: rgba(0, 229, 255, 0.2);
+}
+
+/* ---- Highlights Section ---- */
+.highlights-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4rem) 6rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 3rem;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.highlight-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.25rem 1.75rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s, background 0.3s;
+}
+
+.highlight-card.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.highlight-card:hover {
+  border-color: rgba(0, 229, 255, 0.2);
+  background: var(--surface2);
+}
+
+.highlight-card:hover::before {
+  transform: scaleX(1);
+}
+
+.highlight-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 229, 255, 0.06);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.highlight-card:hover .highlight-icon {
+  background: rgba(0, 229, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+.highlight-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.highlight-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 44px 1fr;
+    gap: 0 1.25rem;
+  }
+
+  .timeline-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 0.95rem;
+  }
+
+  .timeline-card {
+    padding: 1.35rem 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .edu-hero {
+    padding-top: 110px;
+  }
+
+  .highlights-section {
+    text-align: left;
+  }
+
+  .section-label,
+  .section-title {
+    text-align: left;
+  }
+}

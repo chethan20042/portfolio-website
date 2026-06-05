@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education | Chethan Shetty</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/education.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Background Blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-name">CS</div>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">Chethan</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="edu-hero">
+    <div class="edu-hero-inner">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Academic Journey
+      </div>
+      <h1>My <span class="gradient-text">Education</span></h1>
+      <p>A timeline of my academic milestones, achievements, and continuous learning in the field of Computer Applications.</p>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline-section">
+    <div class="timeline-wrap">
+
+      <!-- MCA -->
+      <div class="timeline-item" data-delay="0">
+        <div class="timeline-icon-wrap">
+          <div class="timeline-icon"><i class="fas fa-user-graduate"></i></div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-year">2025 – Present</span>
+          <h2>Master of Computer Applications <span class="degree-tag">MCA</span></h2>
+          <h3><i class="fas fa-building"></i> Your College Name</h3>
+          <p>Currently pursuing MCA with a focus on Software Development, Database Management, Cloud Computing, Cyber Security, Artificial Intelligence, and Digital Forensics.</p>
+          <div class="timeline-tags">
+            <span>Cloud Computing</span>
+            <span>Cyber Security</span>
+            <span>AI & ML</span>
+            <span>Digital Forensics</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BCA -->
+      <div class="timeline-item" data-delay="150">
+        <div class="timeline-icon-wrap">
+          <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-year">2022 – 2025</span>
+          <h2>Bachelor of Computer Applications <span class="degree-tag">BCA</span></h2>
+          <h3><i class="fas fa-building"></i> Your College Name</h3>
+          <p>Completed BCA with strong knowledge in Programming, Web Development, Database Management Systems, Software Engineering, and Computer Networks.</p>
+          <div class="timeline-tags">
+            <span>Web Development</span>
+            <span>Python</span>
+            <span>DBMS</span>
+            <span>Networking</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PUC -->
+      <div class="timeline-item" data-delay="300">
+        <div class="timeline-icon-wrap">
+          <div class="timeline-icon"><i class="fas fa-book-open"></i></div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-year">2020 – 2022</span>
+          <h2>Pre-University Course <span class="degree-tag">PUC</span></h2>
+          <h3><i class="fas fa-building"></i> Your College Name</h3>
+          <p>Completed higher secondary education with subjects that strengthened analytical thinking and problem-solving abilities.</p>
+          <div class="timeline-tags">
+            <span>Mathematics</span>
+            <span>Science</span>
+            <span>Computer Science</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SSLC -->
+      <div class="timeline-item last" data-delay="450">
+        <div class="timeline-icon-wrap">
+          <div class="timeline-icon"><i class="fas fa-school"></i></div>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-year">2020</span>
+          <h2>Secondary School Leaving Certificate <span class="degree-tag">SSLC</span></h2>
+          <h3><i class="fas fa-building"></i> Your School Name</h3>
+          <p>Completed secondary school education and developed a strong academic foundation along with leadership, discipline, and extracurricular participation.</p>
+          <div class="timeline-tags">
+            <span>Leadership</span>
+            <span>Extracurriculars</span>
+            <span>Foundation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="highlights-section">
+    <div class="section-label">
+      <span class="dot"></span> Achievements
+    </div>
+    <h2 class="section-title">Academic <span class="gradient-text">Highlights</span></h2>
+
+    <div class="highlights-grid">
+      <div class="highlight-card" data-delay="0">
+        <div class="highlight-icon"><i class="fas fa-award"></i></div>
+        <h3>NCC 'C' Certificate</h3>
+        <p>Completed NCC C Certificate with B Grade — a testament to discipline, teamwork, and national service commitment.</p>
+      </div>
+      <div class="highlight-card" data-delay="150">
+        <div class="highlight-icon"><i class="fas fa-medal"></i></div>
+        <h3>Rajyapuraskara Award</h3>
+        <p>Successfully completed Rajyapuraskara in Scouts & Guides, one of the highest youth achievement recognitions.</p>
+      </div>
+      <div class="highlight-card" data-delay="300">
+        <div class="highlight-icon"><i class="fas fa-certificate"></i></div>
+        <h3>Technical Certifications</h3>
+        <p>Earned multiple industry-recognized certifications in technology, programming, and software development domains.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Chethan Shetty — Built with passion</p>
+  </footer>
+
+  <script src="js/theme.js"></script>  
+  <script src="js/education.js"></script>
+</body>
+</html>

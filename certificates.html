@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificates | Chethan Shetty</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/certificates.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Background Blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <!-- Loader -->
+  
+
+  <!-- Navbar -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">Chethan</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="certificates.html" class="active">Certificates</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="cert-hero">
+    <div class="cert-hero-inner">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Achievements & Certifications
+      </div>
+      <h1>My <span class="gradient-text">Certificates</span></h1>
+      <p>A showcase of certifications, awards, hackathons, leadership achievements, and technical learning earned throughout my academic and professional journey.</p>
+    </div>
+  </section>
+
+  <!-- Filter Tabs -->
+  <section class="filter-section">
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="award">Awards</button>
+      <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+      <button class="filter-btn" data-filter="course">Courses</button>
+      <button class="filter-btn" data-filter="workshop">Workshops</button>
+    </div>
+  </section>
+
+  <!-- Certificate Grid -->
+  <section class="cert-grid-section">
+    <div class="cert-grid">
+
+      <!-- NCC -->
+      <div class="cert-card" data-category="award" data-delay="0">
+        <div class="cert-card-top">
+          <div class="cert-icon"><i class="fas fa-medal"></i></div>
+          <span class="cert-year">2025</span>
+        </div>
+        <div class="cert-badge award">Award</div>
+        <h2>NCC 'C' Certificate <span class="grade">B Grade</span></h2>
+        <h4><i class="fas fa-building"></i> National Cadet Corps (NCC), Ministry of Defence, Government of India</h4>
+        <p>Successfully passed NCC 'C' Certificate Examination with B Grade under the Karnataka & Goa Directorate.</p>
+        <div class="cert-footer">
+          <div class="cert-tags">
+            <span>Leadership</span>
+            <span>Discipline</span>
+            <span>National Service</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rajya Puraskar -->
+      <div class="cert-card" data-category="award" data-delay="100">
+        <div class="cert-card-top">
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
+          <span class="cert-year">2019</span>
+        </div>
+        <div class="cert-badge award">Award</div>
+        <h2>Rajya Puraskar Award</h2>
+        <h4><i class="fas fa-building"></i> The Bharat Scouts & Guides</h4>
+        <p>Awarded Rajya Puraskar for excellence in scouting, leadership, discipline, and community service.</p>
+        <div class="cert-footer">
+          <div class="cert-tags">
+            <span>Scouting</span>
+            <span>Community Service</span>
+            <span>Leadership</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- First Place -->
+      <div class="cert-card" data-category="award" data-delay="200">
+        <div class="cert-card-top">
+          <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+          <span class="cert-year">2025</span>
+        </div>
+        <div class="cert-badge award">1st Place</div>
+        <h2>Innovverse Product Launch</h2>
+        <h4><i class="fas fa-building"></i> St Joseph Engineering College</h4>
+        <p>Secured First Place in the Innovverse Product Launch event during the National Level IT Fest Joshiana 14.0.</p>
+        <div class="cert-footer">
+          <div class="cert-tags">
+            <span>National Level</span>
+            <span>Product Launch</span>
+            <span>IT Fest</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- InnovateHack -->
+      <div class="cert-card" data-category="hackathon" data-delay="0">
+        <div class="cert-card-top">
+          <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+          <span class="cert-year">2026</span>
+        </div>
+        <div class="cert-badge hackathon">Hackathon</div>
+        <h2>InnovateHack 2K26</h2>
+        <h4><i class="fas fa-building"></i> Institution's Innovation Council (IIC), St Philomena College</h4>
+        <p>Successfully participated in a 32-hour hackathon focused on innovation, ideation, and implementation.</p>
+        <div class="cert-footer">
+          <div class="cert-tags">
+            <span>32 Hours</span>
+            <span>Innovation</span>
+            <span>Ideation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Readiness -->
+      <div class="cert-card" data-category="course" data-delay="100">
+        <div class="cert-card-top">
+          <div class="cert-icon"><i class="fas fa-briefcase"></i></div>
+          <span class="cert-year">2025</span>
+        </div>
+        <div class="cert-badge course">Course</div>
+        <h2>Professional Readiness & Skill Enhancement</h2>
+        <h4><i class="fas fa-building"></i> Department of Computer Applications (PG), St Philomena College</h4>
+        <p>Successfully completed a 30-hour professional readiness and skill enhancement certification course.</p>
+        <div class="cert-footer">
+          <div class="cert-tags">
+            <span>30 Hours</span>
+            <span>Professional Skills</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Science -->
+      <div class="cert-card" data-category="course" data-delay="200">
+        <div class="cert-card-top">
+          <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
+          <span class="cert-year">2025</span>
+        </div>
+        <div class="cert-badge course">Course</div>
+        <h2>Data Science with Modeling</h2>
+        <h4><i class="fas fa-building"></i> Department of BCA, Sacred Heart College, Madanthyar</h4>
+        <p>Successfully completed certification training in Data Science with Modeling techniques and tools.</p>
+        <div class="cert-footer">
+          <div class="cert-tags">
+            <span>Data Science</span>
+            <span>Modeling</span>
+            <span>Analytics</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WordPress Workshop -->
+      <div class="cert-card" data-category="workshop" data-delay="0">
+        <div class="cert-card-top">
+          <div class="cert-icon"><i class="fas fa-globe"></i></div>
+          <span class="cert-year">2026</span>
+        </div>
+        <div class="cert-badge workshop">Workshop</div>
+        <h2>New Age Incubation Network Workshop</h2>
+        <h4><i class="fas fa-building"></i> Innovation Hub & New Age Incubation Network</h4>
+        <p>Participated in a two-day workshop focused on building modern web applications using WordPress.</p>
+        <div class="cert-footer">
+          <div class="cert-tags">
+            <span>WordPress</span>
+            <span>Web Development</span>
+            <span>2 Days</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <i class="fas fa-folder-open"></i>
+      <p>No certificates in this category yet.</p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="cert-stats">
+    <div class="stat-card" data-delay="0">
+      <h2 class="counter" data-target="7">0</h2>
+      <p>Certificates & Awards</p>
+    </div>
+    <div class="stat-card" data-delay="150">
+      <h2 class="counter" data-target="3">0</h2>
+      <p>Leadership Achievements</p>
+    </div>
+    <div class="stat-card" data-delay="300">
+      <h2>100%</h2>
+      <p>Learning Commitment</p>
+    </div>
+  </section>
+
+ 
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Chethan Shetty — Built with passion</p>
+  </footer>
+
+  <script src="js/theme.js"></script>  
+  <script src="js/certificates.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Chethan Shetty</title>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/projects.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Background Blobs -->
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+
+<!-- Navbar -->
+<header id="header">
+  <nav class="navbar">
+    <div class="logo">Chethan</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="projects-hero">
+  <div class="projects-heading">
+    <span class="projects-tag">
+      <i class="fas fa-folder-open"></i>
+      Work &amp; Projects
+    </span>
+    <h1>
+      Things I've
+      <span>Built</span>
+    </h1>
+    <p>
+      A collection of projects that reflect my passion for building
+      meaningful and impactful digital experiences.
+    </p>
+  </div>
+</section>
+
+<!-- Filter Tabs -->
+<section class="filter-section">
+  <div class="filter-tabs">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web Dev</button>
+    <button class="filter-btn" data-filter="python">Python</button>
+    <button class="filter-btn" data-filter="security">Security</button>
+  </div>
+</section>
+
+<!-- Projects Grid -->
+<section class="projects-grid" id="projectsGrid">
+
+  <!-- Project 1: ClimePulse -->
+  <div class="project-card" data-category="web python">
+    <div class="project-image">
+      <div class="project-placeholder">
+        <i class="fas fa-cloud-sun"></i>
+      </div>
+      <div class="project-overlay">
+        <a href="https://github.com/chethan20042/CLIMEPLUS-Real-time-Weather" target="_blank" class="overlay-btn">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-tags">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>Weather API</span>
+        <span>MySQL</span>
+      </div>
+      <h3>ClimePulse</h3>
+      <p>A real-time weather and user hub that fetches live climate data, manages user profiles, and delivers location-based weather insights through a clean, responsive web interface.</p>
+      <div class="project-links">
+        <a href="https://github.com/chethan20042/CLIMEPLUS-Real-time-Weather" target="_blank">
+          <i class="fab fa-github"></i> Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2: Dog Emotion Detection -->
+  <div class="project-card" data-category="web python">
+    <div class="project-image">
+      <div class="project-placeholder">
+        <i class="fas fa-dog"></i>
+      </div>
+      <div class="project-overlay">
+        <a href="https://github.com/chethan20042/dog-emotion-MCA" target="_blank" class="overlay-btn">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-tags">
+        <span>Deep Learning</span>
+        <span>Python</span>
+        <span>TensorFlow</span>
+        <span>Web</span>
+      </div>
+      <h3>Dog Emotion Detection</h3>
+      <p>A web-based deep learning system that analyzes images of dogs and classifies their emotional states using a trained CNN model deployed through a browser interface.</p>
+      <div class="project-links">
+        <a href="https://github.com/chethan20042/dog-emotion-MCA" target="_blank">
+          <i class="fab fa-github"></i> Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3: Virtual Farm Twin -->
+  <div class="project-card" data-category="web python">
+    <div class="project-image">
+      <div class="project-placeholder">
+        <i class="fas fa-tractor"></i>
+      </div>
+      <div class="project-overlay">
+        <a href="https://github.com/chethan20042/virtual-farm-twin1" target="_blank" class="overlay-btn">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-tags">
+        <span>JavaScript</span>
+        <span>CSS</span>
+        <span>HTML</span>
+        <span>Backend</span>
+      </div>
+      <h3>Virtual Farm Twin</h3>
+      <p>A digital twin simulation of a farm environment built with a JS/CSS frontend and backend integration, enabling real-time monitoring and visualization of farm operations and data.</p>
+      <div class="project-links">
+        <a href="https://github.com/chethan20042/virtual-farm-twin1" target="_blank">
+          <i class="fab fa-github"></i> Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 4: Cybersecurity Workshop -->
+  <div class="project-card" data-category="security">
+    <div class="project-image">
+      <div class="project-placeholder">
+        <i class="fas fa-shield-halved"></i>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-tags">
+        <span>Cybersecurity</span>
+        <span>Digital Forensics</span>
+        <span>Workshop</span>
+      </div>
+      <h3>Hands-On Cybersecurity &amp; Digital Forensics</h3>
+      <p>Participated in an intensive hands-on workshop covering cybersecurity fundamentals, ethical hacking techniques, and digital forensics methodologies for real-world investigations.</p>
+      <div class="project-links">
+        <a href="#" class="disabled-link">
+          <i class="fas fa-certificate"></i> Workshop
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Chethan Shetty — Built with passion</p>
+</footer>
+
+<script src="js/theme.js"></script>  
+<script src="js/projects.js"></script>
+
+</body>
+</html>
