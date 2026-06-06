@@ -1,10 +1,3 @@
-/* =============================================
-   CHETHAN SHETTY | EDUCATION — education.css
-   (Depends on style.css for reset, vars, navbar,
-    cursor, blobs, loader, footer, social)
-   ============================================= */
-
-/* ---- Active nav link ---- */
 .nav-links a.active {
   color: var(--accent);
 }
@@ -12,7 +5,6 @@
   transform: scaleX(1);
 }
 
-/* ---- Page Hero ---- */
 .edu-hero {
   min-height: 44vh;
   display: flex;
@@ -69,7 +61,6 @@
   font-weight: 300;
 }
 
-/* ---- Timeline Section ---- */
 .timeline-section {
   max-width: 860px;
   margin: 0 auto;
@@ -84,7 +75,6 @@
   gap: 0;
 }
 
-/* ---- Timeline Item ---- */
 .timeline-item {
   display: grid;
   grid-template-columns: 56px 1fr;
@@ -99,7 +89,6 @@
   transform: none;
 }
 
-/* Icon column */
 .timeline-icon-wrap {
   display: flex;
   flex-direction: column;
@@ -257,7 +246,6 @@
   border-color: rgba(0, 229, 255, 0.2);
 }
 
-/* ---- Highlights Section ---- */
 .highlights-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -367,7 +355,6 @@
   font-weight: 300;
 }
 
-/* ---- Responsive ---- */
 @media (max-width: 900px) {
   .highlights-grid {
     grid-template-columns: 1fr;

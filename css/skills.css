@@ -1,8 +1,3 @@
-/* ============================================
-   skills.css — Chethan Shetty Portfolio
-   Matches index.html / about.css design system
-   ============================================ */
-
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -30,7 +25,6 @@ body {
   cursor: none;
 }
 
-/* ---- Custom Cursor ---- */
 .cursor {
   width: 12px; height: 12px;
   background: var(--accent);
@@ -51,7 +45,6 @@ body {
   transition: transform 0.35s cubic-bezier(.23,1,.32,1);
 }
 
-/* ---- Grid noise overlay ---- */
 body::before {
   content: '';
   position: fixed; inset: 0;
@@ -63,7 +56,6 @@ body::before {
   z-index: 0;
 }
 
-/* ---- Glow Blobs ---- */
 .blob {
   position: fixed;
   border-radius: 50%;
@@ -75,7 +67,6 @@ body::before {
 .blob-1 { width: 500px; height: 500px; background: var(--accent); top: -150px; right: -100px; }
 .blob-2 { width: 400px; height: 400px; background: var(--accent2); bottom: -100px; left: -100px; }
 
-/* ---- Navbar ---- */
 header {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
@@ -155,7 +146,6 @@ header.scrolled {
 }
 #theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
-/* ---- Hamburger ---- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -172,9 +162,6 @@ header.scrolled {
   transition: all 0.3s;
 }
 
-/* ============================================
-   SKILLS HERO
-   ============================================ */
 .skills-hero {
   min-height: 46vh;
   display: flex;
@@ -231,9 +218,6 @@ header.scrolled {
   line-height: 1.75;
 }
 
-/* ============================================
-   PROGRESS BAR SKILL CARDS
-   ============================================ */
 .skills-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -304,9 +288,6 @@ header.scrolled {
   text-align: right;
 }
 
-/* ============================================
-   CATEGORY CARDS
-   ============================================ */
 .categories-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -390,7 +371,6 @@ header.scrolled {
   padding-left: 4px;
 }
 
-/* ---- Footer ---- */
 footer {
   border-top: 1px solid var(--border);
   padding: 2rem;
@@ -402,13 +382,11 @@ footer {
   letter-spacing: 0.04em;
 }
 
-/* ---- Keyframes ---- */
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ---- Light Theme ---- */
 body.light {
   --bg: #f0f4f8;
   --surface: #ffffff;
@@ -428,7 +406,6 @@ body.light .nav-links.open {
   background: rgba(240,244,248,0.97);
 }
 
-/* ---- Responsive ---- */
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-links.open {

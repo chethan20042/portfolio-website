@@ -1,8 +1,3 @@
-/* ============================================
-   about.css — Chethan Shetty Portfolio
-   Matches index.html design system exactly
-   ============================================ */
-
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -30,7 +25,6 @@ body {
   cursor: none;
 }
 
-/* ---- Custom Cursor ---- */
 .cursor {
   width: 12px; height: 12px;
   background: var(--accent);
@@ -51,7 +45,6 @@ body {
   transition: transform 0.35s cubic-bezier(.23,1,.32,1);
 }
 
-/* ---- Grid noise overlay ---- */
 body::before {
   content: '';
   position: fixed; inset: 0;
@@ -63,7 +56,6 @@ body::before {
   z-index: 0;
 }
 
-/* ---- Glow Blobs ---- */
 .blob {
   position: fixed;
   border-radius: 50%;
@@ -75,7 +67,6 @@ body::before {
 .blob-1 { width: 500px; height: 500px; background: var(--accent); top: -150px; right: -100px; }
 .blob-2 { width: 400px; height: 400px; background: var(--accent2); bottom: -100px; left: -100px; }
 
-/* ---- Navbar ---- */
 header {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
@@ -155,7 +146,6 @@ header.scrolled {
 }
 #theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
-/* ---- Hamburger ---- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -172,7 +162,6 @@ header.scrolled {
   transition: all 0.3s;
 }
 
-/* ---- About Hero ---- */
 .about-hero {
   min-height: 46vh;
   display: flex;
@@ -229,7 +218,6 @@ header.scrolled {
   line-height: 1.75;
 }
 
-/* ---- About Section ---- */
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -241,7 +229,6 @@ header.scrolled {
   gap: 1.5rem;
 }
 
-/* ---- Card ---- */
 .about-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -309,14 +296,12 @@ header.scrolled {
   color: var(--text);
 }
 
-/* ---- 2-column grid ---- */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
 
-/* ---- Profile summary grid ---- */
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -353,7 +338,6 @@ header.scrolled {
   line-height: 1.5;
 }
 
-/* ---- Reveal animation ---- */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -364,7 +348,6 @@ header.scrolled {
   transform: translateY(0);
 }
 
-/* ---- Footer ---- */
 footer {
   border-top: 1px solid var(--border);
   padding: 2rem;
@@ -376,13 +359,11 @@ footer {
   letter-spacing: 0.04em;
 }
 
-/* ---- Keyframes ---- */
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ---- Light theme overrides ---- */
 body.light {
   --bg: #f0f4f8;
   --surface: #ffffff;
@@ -400,7 +381,6 @@ body.light .about-card:hover {
   box-shadow: 0 12px 40px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,229,255,0.08);
 }
 
-/* ---- Responsive ---- */
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-links.open {

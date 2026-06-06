@@ -1,8 +1,3 @@
-/* ============================================
-   skills.js — Chethan Shetty Portfolio
-   ============================================ */
-
-// ---- Custom Cursor ----
 const cursor     = document.createElement('div');
 const cursorRing = document.createElement('div');
 cursor.className     = 'cursor';
@@ -34,12 +29,10 @@ document.querySelectorAll('a, button').forEach(el => {
   });
 });
 
-// ---- Navbar scroll effect ----
 window.addEventListener('scroll', () => {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
 });
 
-// ---- Hamburger menu ----
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
 
@@ -51,7 +44,6 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// ---- Theme toggle (persisted via localStorage) ----
 const themeBtn = document.getElementById('theme-toggle');
 const THEME_KEY = 'cs-theme';
 
@@ -71,7 +63,6 @@ themeBtn.addEventListener('click', () => {
   localStorage.setItem(THEME_KEY, isLight ? 'light' : 'dark');
 });
 
-// ---- Scroll reveal + progress bar animation ----
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
@@ -82,11 +73,9 @@ const observer = new IntersectionObserver((entries) => {
     setTimeout(() => {
       el.classList.add('visible');
 
-      // Animate progress bar if present
       const bar = el.querySelector('.progress-bar');
       if (bar) {
         const targetWidth = bar.dataset.width + '%';
-        // Small extra delay so the card fade-in starts first
         setTimeout(() => {
           bar.style.width = targetWidth;
         }, 120);
@@ -97,13 +86,11 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 
-// Stagger skill cards
 document.querySelectorAll('.skill-card').forEach((card, i) => {
   card.dataset.delay = i * 75;
   observer.observe(card);
 });
 
-// Stagger category cards
 document.querySelectorAll('.category-card').forEach((card, i) => {
   card.dataset.delay = i * 80;
   observer.observe(card);

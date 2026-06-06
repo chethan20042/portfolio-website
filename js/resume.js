@@ -1,23 +1,14 @@
-// =============================================
-// NAVBAR SCROLL EFFECT
-// =============================================
 window.addEventListener("scroll", () => {
   const header = document.getElementById("header");
   if (header) header.classList.toggle("scrolled", window.scrollY > 30);
 });
 
-// =============================================
-// MOBILE MENU (HAMBURGER)
-// =============================================
 const hamburger = document.getElementById("hamburger");
 const navLinks  = document.getElementById("navLinks");
 if (hamburger && navLinks) {
   hamburger.addEventListener("click", () => navLinks.classList.toggle("open"));
 }
 
-// =============================================
-// SUMMARY CARDS — STAGGERED SCROLL REVEAL
-// =============================================
 const summaryCards = document.querySelectorAll(".summary-card");
 if (summaryCards.length) {
   const observer = new IntersectionObserver((entries) => {
@@ -31,9 +22,6 @@ if (summaryCards.length) {
   summaryCards.forEach(card => observer.observe(card));
 }
 
-// =============================================
-// THEME TOGGLE (DARK / LIGHT)
-// =============================================
 const themeToggle = document.getElementById("theme-toggle");
 if (themeToggle) {
   let isLight = false;
@@ -52,9 +40,6 @@ if (themeToggle) {
   });
 }
 
-// =============================================
-// CUSTOM CURSOR
-// =============================================
 const cursor = document.getElementById("cursor");
 const ring   = document.getElementById("cursorRing");
 if (cursor && ring) {

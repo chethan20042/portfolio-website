@@ -1,10 +1,5 @@
-/* =============================================
-   projects.js — matches style.css conventions
-   ============================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---- Custom Cursor ---- */
   const cursor     = document.createElement('div');
   const cursorRing = document.createElement('div');
   cursor.classList.add('cursor');
@@ -38,13 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---- Sticky Header ---- */
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
     header?.classList.toggle('scrolled', window.scrollY > 20);
   });
 
-  /* ---- Hamburger / Mobile Nav ---- */
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
 
@@ -60,13 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---- Theme Toggle ---- */
   const themeToggle = document.getElementById('theme-toggle');
 
   if (themeToggle) {
     let isLightTheme = localStorage.getItem('theme') === 'light';
 
-    // Apply saved theme on load
     if (isLightTheme) {
       applyTheme(true);
       themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
@@ -92,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* ---- Project Filter ---- */
   const filterBtns   = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
@@ -114,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---- Scroll Reveal ---- */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {

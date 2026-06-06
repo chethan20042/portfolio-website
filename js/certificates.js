@@ -1,6 +1,3 @@
-// =========================
-// Loader
-// =========================
 window.addEventListener("load", () => {
   setTimeout(() => {
     const loader = document.getElementById("loader");
@@ -10,9 +7,6 @@ window.addEventListener("load", () => {
   }, 1600);
 });
 
-// =========================
-// Custom Cursor
-// =========================
 const cursor = document.getElementById("cursor");
 const ring = document.getElementById("cursorRing");
 
@@ -47,9 +41,6 @@ if (cursor && ring) {
   });
 }
 
-// =========================
-// Navbar Scroll Effect
-// =========================
 window.addEventListener("scroll", () => {
   const header = document.getElementById("header");
   if (header) {
@@ -57,9 +48,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// =========================
-// Mobile Menu
-// =========================
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
@@ -69,9 +57,6 @@ if (hamburger && navLinks) {
   });
 }
 
-// =========================
-// Filter Tabs
-// =========================
 const filterBtns = document.querySelectorAll(".filter-btn");
 const certCards = document.querySelectorAll(".cert-card");
 const emptyState = document.getElementById("emptyState");
@@ -79,7 +64,7 @@ const emptyState = document.getElementById("emptyState");
 if (filterBtns.length > 0) {
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      // Update active button
+      
       filterBtns.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
 
@@ -93,7 +78,7 @@ if (filterBtns.length > 0) {
         if (matches) {
           card.style.display = "";
           visibleCount++;
-          // Re-trigger entrance animation
+          
           card.classList.remove("visible");
           const delay = parseInt(card.dataset.delay) || 0;
           setTimeout(() => card.classList.add("visible"), delay + 50);
@@ -103,7 +88,6 @@ if (filterBtns.length > 0) {
         }
       });
 
-      // Show/hide empty state
       if (emptyState) {
         emptyState.style.display = visibleCount === 0 ? "block" : "none";
       }
@@ -111,9 +95,6 @@ if (filterBtns.length > 0) {
   });
 }
 
-// =========================
-// Certificate Card Scroll Animation
-// =========================
 const certCardObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -132,9 +113,6 @@ const certCardObserver = new IntersectionObserver(
 
 certCards.forEach((card) => certCardObserver.observe(card));
 
-// =========================
-// Counter Animation
-// =========================
 function animateCounter(counter) {
   const target = parseInt(counter.dataset.target);
   const duration = 1600;
@@ -155,9 +133,6 @@ function animateCounter(counter) {
   requestAnimationFrame(updateCounter);
 }
 
-// =========================
-// Stats Animation
-// =========================
 const statCards = document.querySelectorAll(".cert-stats .stat-card");
 
 if (statCards.length > 0) {
@@ -186,9 +161,6 @@ if (statCards.length > 0) {
   statCards.forEach((card) => statsObserver.observe(card));
 }
 
-// =========================
-// Theme Toggle
-// =========================
 const themeToggle = document.getElementById("theme-toggle");
 
 if (themeToggle) {

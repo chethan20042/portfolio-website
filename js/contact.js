@@ -1,6 +1,3 @@
-// =========================
-// Custom Cursor
-// =========================
 const cursor = document.getElementById("cursor");
 const ring = document.getElementById("cursorRing");
 
@@ -35,9 +32,8 @@ if (cursor && ring) {
   });
 }
 
-// =========================
-// Navbar Scroll Effect
-// =========================
+
+
 window.addEventListener("scroll", () => {
   const header = document.getElementById("header");
   if (header) {
@@ -45,9 +41,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// =========================
-// Mobile Menu
-// =========================
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
@@ -57,9 +50,6 @@ if (hamburger && navLinks) {
   });
 }
 
-// =========================
-// Theme Toggle
-// =========================
 const themeToggle = document.getElementById("theme-toggle");
 
 if (themeToggle) {
@@ -82,9 +72,6 @@ if (themeToggle) {
   });
 }
 
-// =========================
-// Contact Form
-// =========================
 const contactForm = document.getElementById("contactForm");
 const formSuccess = document.getElementById("formSuccess");
 
@@ -95,24 +82,19 @@ if (contactForm) {
     const btn = contactForm.querySelector(".btn-submit");
     const originalHTML = btn.innerHTML;
 
-    // Loading state
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     btn.disabled = true;
 
-    // Simulate send (replace with your actual email service, e.g. EmailJS / Formspree)
     setTimeout(() => {
       btn.innerHTML = originalHTML;
       btn.disabled = false;
 
-      // Show success
       if (formSuccess) {
         formSuccess.classList.add("show");
       }
 
-      // Reset form
       contactForm.reset();
 
-      // Hide success after 4s
       setTimeout(() => {
         if (formSuccess) formSuccess.classList.remove("show");
       }, 4000);

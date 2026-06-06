@@ -1,9 +1,3 @@
-/* ============================================
-   about.js — Chethan Shetty Portfolio
-   Matches index.html JS patterns exactly
-   ============================================ */
-
-// ---- Custom Cursor ----
 const cursor     = document.createElement('div');
 const cursorRing = document.createElement('div');
 cursor.className     = 'cursor';
@@ -35,14 +29,12 @@ document.querySelectorAll('a, button').forEach(el => {
   });
 });
 
-// ---- Navbar scroll effect ----
 const header = document.getElementById('header');
 
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 30);
 });
 
-// ---- Hamburger menu ----
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
 
@@ -51,17 +43,14 @@ if (hamburger && navLinks) {
     navLinks.classList.toggle('open');
   });
 
-  // Close menu when a link is clicked
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => navLinks.classList.remove('open'));
   });
 }
 
-// ---- Theme toggle ----
 const themeBtn = document.getElementById('theme-toggle');
 const THEME_KEY = 'cs-theme';
 
-// Persist theme across pages
 function applyTheme(isLight) {
   document.body.classList.toggle('light', isLight);
   themeBtn.innerHTML = isLight
@@ -69,7 +58,6 @@ function applyTheme(isLight) {
     : '<i class="fas fa-moon"></i>';
 }
 
-// Load saved preference
 const savedTheme = localStorage.getItem(THEME_KEY);
 let isLight = savedTheme === 'light';
 applyTheme(isLight);
@@ -80,11 +68,9 @@ themeBtn.addEventListener('click', () => {
   localStorage.setItem(THEME_KEY, isLight ? 'light' : 'dark');
 });
 
-// ---- Scroll reveal ----
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      // Stagger cards slightly
       const delay = entry.target.dataset.delay
         ? parseInt(entry.target.dataset.delay)
         : 0;
@@ -96,7 +82,6 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-// Stagger delay for reveal items in sequence
 document.querySelectorAll('.reveal').forEach((el, i) => {
   el.dataset.delay = i * 80;
   revealObserver.observe(el);

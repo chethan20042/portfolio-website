@@ -1,6 +1,3 @@
-/* =============================================
-   RESET & ROOT VARIABLES
-============================================= */
 *, *::before, *::after {
   margin: 0; padding: 0; box-sizing: border-box;
 }
@@ -30,7 +27,6 @@ body {
   cursor: none;
 }
 
-/* Grid Overlay */
 body::before {
   content: '';
   position: fixed; inset: 0;
@@ -41,9 +37,6 @@ body::before {
   pointer-events: none; z-index: 0;
 }
 
-/* =============================================
-   CUSTOM CURSOR
-============================================= */
 .cursor {
   width: 12px; height: 12px;
   background: var(--accent);
@@ -63,9 +56,6 @@ body::before {
   transition: transform 0.35s cubic-bezier(0.23,1,0.32,1);
 }
 
-/* =============================================
-   BACKGROUND BLOBS
-============================================= */
 .blob {
   position: fixed; border-radius: 50%;
   filter: blur(100px); pointer-events: none;
@@ -74,9 +64,6 @@ body::before {
 .blob-1 { width:500px; height:500px; background:var(--accent);  top:-150px; right:-100px; }
 .blob-2 { width:400px; height:400px; background:var(--accent2); bottom:-100px; left:-100px; }
 
-/* =============================================
-   NAVBAR
-============================================= */
 header {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
@@ -159,9 +146,6 @@ header.scrolled {
   transition: all 0.3s;
 }
 
-/* =============================================
-   RESUME HERO
-============================================= */
 .resume-hero {
   min-height: 40vh;
   display: flex; align-items: center; justify-content: center;
@@ -208,9 +192,6 @@ header.scrolled {
   line-height: 1.8; font-weight: 300;
 }
 
-/* =============================================
-   RESUME CARD SECTION
-============================================= */
 .resume-section {
   display: flex; justify-content: center;
   padding: 0 clamp(1.5rem,5vw,4rem) 5rem;
@@ -281,9 +262,6 @@ header.scrolled {
   justify-content: center; flex-wrap: wrap;
 }
 
-/* =============================================
-   BUTTONS
-============================================= */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 0.75rem 1.8rem; border-radius: 8px;
@@ -314,9 +292,6 @@ header.scrolled {
   transform: translateY(-2px);
 }
 
-/* =============================================
-   SUMMARY SECTION
-============================================= */
 .summary-section {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -372,9 +347,6 @@ header.scrolled {
   line-height: 1.7; font-weight: 300;
 }
 
-/* =============================================
-   FOOTER
-============================================= */
 footer {
   border-top: 1px solid var(--border);
   padding: 2rem; text-align: center;
@@ -383,17 +355,11 @@ footer {
   letter-spacing: 0.04em;
 }
 
-/* =============================================
-   KEYFRAMES
-============================================= */
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* =============================================
-   RESPONSIVE
-============================================= */
 @media (max-width: 900px) {
   .nav-links { display: none; }
 

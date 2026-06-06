@@ -1,12 +1,6 @@
-// =========================
-// Loader — skip instantly on internal navigation
-// =========================
 const loader = document.getElementById("loader");
 if (loader) loader.classList.add("hidden");
 
-// =========================
-// Custom Cursor
-// =========================
 const cursor = document.getElementById("cursor");
 const ring = document.getElementById("cursorRing");
 
@@ -38,17 +32,11 @@ if (cursor && ring) {
   });
 }
 
-// =========================
-// Navbar Scroll Effect
-// =========================
 window.addEventListener("scroll", () => {
   const header = document.getElementById("header");
   if (header) header.classList.toggle("scrolled", window.scrollY > 30);
 });
 
-// =========================
-// Mobile Menu
-// =========================
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
@@ -58,9 +46,6 @@ if (hamburger && navLinks) {
   });
 }
 
-// =========================
-// Theme Toggle
-// =========================
 const themeToggle = document.getElementById("theme-toggle");
 
 if (themeToggle) {
@@ -83,9 +68,6 @@ if (themeToggle) {
   });
 }
 
-// =========================
-// Timeline Scroll Animation
-// =========================
 const timelineItems = document.querySelectorAll(".timeline-item");
 
 if (timelineItems.length > 0) {
@@ -106,9 +88,6 @@ if (timelineItems.length > 0) {
   timelineItems.forEach((item) => observer.observe(item));
 }
 
-// =========================
-// Highlights Scroll Animation
-// =========================
 const highlightCards = document.querySelectorAll(".highlight-card");
 
 if (highlightCards.length > 0) {

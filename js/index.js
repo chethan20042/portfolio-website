@@ -1,6 +1,4 @@
-// =========================
-// Loader
-// =========================
+
 window.addEventListener("load", () => {
   setTimeout(() => {
     const loader = document.getElementById("loader");
@@ -10,9 +8,7 @@ window.addEventListener("load", () => {
   }, 1600);
 });
 
-// =========================
-// Custom Cursor
-// =========================
+
 const cursor = document.getElementById("cursor");
 const ring = document.getElementById("cursorRing");
 
@@ -55,9 +51,7 @@ if (cursor && ring) {
   });
 }
 
-// =========================
-// Navbar Scroll Effect
-// =========================
+
 window.addEventListener("scroll", () => {
   const header = document.getElementById("header");
 
@@ -66,9 +60,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// =========================
-// Mobile Menu
-// =========================
+
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
@@ -78,16 +70,13 @@ if (hamburger && navLinks) {
   });
 }
 
-// =========================
-// Typing Animation
-// =========================
+
 const typingElement = document.getElementById("typing");
 
 if (typingElement) {
   const phrases = [
-    "Python Developer",
+    "Full Stack Developer",
     "Web Developer",
-    "Database Enthusiast",
     "Problem Solver"
   ];
 
@@ -123,9 +112,7 @@ if (typingElement) {
   setTimeout(typeEffect, 2200);
 }
 
-// =========================
-// Counter Animation
-// =========================
+
 function animateCounter(counter) {
   const target = parseInt(counter.dataset.target);
   const duration = 1600;
@@ -151,9 +138,7 @@ function animateCounter(counter) {
   requestAnimationFrame(updateCounter);
 }
 
-// =========================
-// Stats Animation
-// =========================
+
 const statCards = document.querySelectorAll(".stat-card");
 
 if (statCards.length > 0) {
@@ -186,9 +171,6 @@ if (statCards.length > 0) {
   statCards.forEach((card) => observer.observe(card));
 }
 
-// =========================
-// Theme Toggle
-// =========================
 const themeToggle = document.getElementById("theme-toggle");
 
 if (themeToggle) {
